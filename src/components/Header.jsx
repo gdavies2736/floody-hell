@@ -1,9 +1,10 @@
 import React from "react";
 import "../styles/Header.css";
 
-const Header = () => {
+function Header () {
     return (
         <>
+        <p>Test for Header</p>
         </>
     )
 }

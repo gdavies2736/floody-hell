@@ -4,6 +4,7 @@ import "../styles/Section.css"
 const Section = () => {
     return (
         <>
+        Test for section 
         </>
     )
 }

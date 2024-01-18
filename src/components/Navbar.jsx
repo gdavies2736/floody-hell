@@ -4,6 +4,7 @@ import "../styles/Navbar.css"
 const Navbar = () => {
     return (
         <>
+        Test for Nav Bar
         </>
     )
 }
