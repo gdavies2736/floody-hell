@@ -5,6 +5,9 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Header from './components/Header';
 import Section from './components/Section';
+import PolygonMap from './components/PolygonMap';
+import SearchPostcode from './components/SearchPostcode';
+import FloodAlert from './components/FloodAlert';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,6 +17,9 @@ function App() {
       <Navbar />
       <Header />
       <Section />
+      <PolygonMap />
+      <SearchPostcode />
+      <FloodAlert />
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
