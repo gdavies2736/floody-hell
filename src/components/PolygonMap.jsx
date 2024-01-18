@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import H from '@here/maps-api-for-javascript'; // npm install @here/maps-api-for-javascript --registry=https://repo.platform.here.com/artifactory/api/npm/maps-api-for-javascript/
 
 const Map = (props) => {
+  console.log(props);
   const mapRef = useRef(null);
   const map = useRef(null);
   const platform = useRef(null);
