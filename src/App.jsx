@@ -17,7 +17,7 @@ function App() {
       <Navbar />
       <Header />
       <Section />
-      <PolygonMap />
+      <PolygonMap type="geNXYHrS1agADyZRRPuK8Ye2x1YJcZIbWIbyhBtcdUs"/>
       <SearchPostcode />
       <FloodAlert />
       <div>
