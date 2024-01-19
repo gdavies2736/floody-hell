@@ -4,18 +4,18 @@ import polygonmapAPI from "../utils/polygonmapAPI";
 import PolygonObject from "./PolygonObject";
 
 const Map = () => {
-  console.log("APIkey of here map: ", polygonmapAPI);
+  // console.log("APIkey of here map: ", polygonmapAPI);
   // console.log(props);
   const mapRef = useRef(null);
   const map = useRef(null);
   const platform = useRef(null);
-  const { apikey } = polygonmapAPI;
+  const { apikey, testPolygonObject } = polygonmapAPI;
 
   let latAverage = 0;
   let lngAverage = 0;
   let count = 0;
 
-  polygonmapAPI.testPolygonObject.features[0].geometry.coordinates[0].map(elem => {
+  testPolygonObject.features[0].geometry.coordinates[0].map(elem => {
     latAverage += elem[1];
     lngAverage += elem[0];
     count ++;
@@ -27,13 +27,15 @@ const Map = () => {
       if (!map.current) {
         // Create a platform object with the API key
         platform.current = new H.service.Platform({ apikey });
+        
         // Create a new Raster Tile service instance
         const rasterTileService = platform.current.getRasterTileService({
           queryParams: {
             style: "explore.day",
-            size: 512,
+            size: 2048,
           },
         });
+
         // Creates a new instance of the H.service.rasterTile.Provider class
         // The class provides raster tiles for a given tile layer ID and pixel format
         const rasterTileProvider = new H.service.rasterTile.Provider(
@@ -41,6 +43,7 @@ const Map = () => {
         );
         // Create a new Tile layer with the Raster Tile provider
         const rasterTileLayer = new H.map.layer.TileLayer(rasterTileProvider);
+        
         // Create a new map instance with the Tile layer, center and zoom level
         const newMap = new H.Map(mapRef.current, rasterTileLayer, {
           pixelRatio: window.devicePixelRatio,
@@ -60,9 +63,6 @@ const Map = () => {
 
         // Set the map object to the reference
         map.current = newMap;
-        
-        
-
       }
     },
     // Dependencies array

@@ -8,6 +8,7 @@ import Section from './components/Section';
 import Map from './components/PolygonMap';
 import SearchPostcode from './components/SearchPostcode';
 import FloodAlert from './components/FloodAlert';
+import Maptest from './components/Maptest';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,6 +19,7 @@ function App() {
       <Header />
       <Section />
       <Map />
+      <Maptest className="testmap"/>
       <SearchPostcode />
       <FloodAlert />
       <div>
