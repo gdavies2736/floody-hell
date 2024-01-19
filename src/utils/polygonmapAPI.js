@@ -1,4 +1,4 @@
-const APIkey = "geNXYHrS1agADyZRRPuK8Ye2x1YJcZIbWIbyhBtcdUs"; // platform.here.com API for creating map
+const apikey = "geNXYHrS1agADyZRRPuK8Ye2x1YJcZIbWIbyhBtcdUs"; // platform.here.com API for creating map
 
 const testPolygonObject = {
         "type": "FeatureCollection",
@@ -800,4 +800,4 @@ const testPolygonObject = {
     
     
 
-export default {APIkey, testPolygonObject };
+export default {apikey, testPolygonObject };

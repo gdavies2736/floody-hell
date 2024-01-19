@@ -17,7 +17,7 @@ function App() {
       <Navbar />
       <Header />
       <Section />
-      <Map apikey={'geNXYHrS1agADyZRRPuK8Ye2x1YJcZIbWIbyhBtcdUs'} />
+      <Map />
       <SearchPostcode />
       <FloodAlert />
       <div>

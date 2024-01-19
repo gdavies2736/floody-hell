@@ -3,11 +3,12 @@ import H from '@here/maps-api-for-javascript'; // npm install @here/maps-api-for
 import polygonmapAPI from "../utils/polygonmapAPI";
 
 const Map = (props) => {
-  console.log(props);
+  console.log("APIkey of here map: ", polygonmapAPI);
+  // console.log(props);
   const mapRef = useRef(null);
   const map = useRef(null);
   const platform = useRef(null);
-  const { apikey } = props;
+  const { apikey } = polygonmapAPI;
 
   useEffect(
     () => {
