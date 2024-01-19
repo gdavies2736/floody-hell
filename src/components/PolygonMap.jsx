@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import H from '@here/maps-api-for-javascript'; // npm install @here/maps-api-for-javascript --registry=https://repo.platform.here.com/artifactory/api/npm/maps-api-for-javascript/
+import polygonmapAPI from "../utils/polygonmapAPI";
 
 const Map = (props) => {
   console.log(props);
@@ -56,3 +57,6 @@ return <div style={ { width: "100%", height: "500px" } } ref={mapRef} />;
 }
 
 export default Map;
+
+// https://www.here.com/docs/bundle/maps-api-for-javascript-developer-guide/page/topics/react-practices.html#add-a-react-functional-component-that-displays-a-map
+// https://developer.here.com/documentation/examples/maps-js/geoshapes/polygon-on-the-map
