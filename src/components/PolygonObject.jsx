@@ -4,7 +4,7 @@ import polygonmapAPI from "../utils/polygonmapAPI";
 import Map from "./PolygonMap";
 
 function PolygonObject(map) {
-    console.log(polygonmapAPI.testPolygonObject.features[0].geometry.coordinates[0])
+    // console.log(polygonmapAPI.testPolygonObject.features[0].geometry.coordinates[0])
     const coordinateArr = [];
     polygonmapAPI.testPolygonObject.features[0].geometry.coordinates[0].map(elem => {
         coordinateArr.push(elem[1]);

@@ -11,6 +11,16 @@ const Map = () => {
   const platform = useRef(null);
   const { apikey } = polygonmapAPI;
 
+  let latAverage = 0;
+  let lngAverage = 0;
+  let count = 0;
+
+  polygonmapAPI.testPolygonObject.features[0].geometry.coordinates[0].map(elem => {
+    latAverage += elem[1];
+    lngAverage += elem[0];
+    count ++;
+  })
+
   useEffect(
     () => {
       // Check if the map object has already been created
@@ -35,8 +45,8 @@ const Map = () => {
         const newMap = new H.Map(mapRef.current, rasterTileLayer, {
           pixelRatio: window.devicePixelRatio,
           center: {
-            lat: 53.349805,
-            lng: -6.260310,
+            lat: latAverage/count,
+            lng: lngAverage/count,
           },
           zoom: 14,
         });
@@ -60,7 +70,10 @@ const Map = () => {
   );
 
 // Return a div element to hold the map
-return <div style={ { width: "100%", height: "500px" } } ref={mapRef} />;
+return (
+      <>
+      <div style={ { width: "100%", height: "500px" } } ref={mapRef} />
+      </>);
 }
 
 export default Map;
