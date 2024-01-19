@@ -1,8 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import H from '@here/maps-api-for-javascript'; // npm install @here/maps-api-for-javascript --registry=https://repo.platform.here.com/artifactory/api/npm/maps-api-for-javascript/
 import polygonmapAPI from "../utils/polygonmapAPI";
+import PolygonObject from "./PolygonObject";
 
-const Map = (props) => {
+const Map = () => {
   console.log("APIkey of here map: ", polygonmapAPI);
   // console.log(props);
   const mapRef = useRef(null);
@@ -34,8 +35,8 @@ const Map = (props) => {
         const newMap = new H.Map(mapRef.current, rasterTileLayer, {
           pixelRatio: window.devicePixelRatio,
           center: {
-            lat: 64.144,
-            lng: -21.94,
+            lat: 53.349805,
+            lng: -6.260310,
           },
           zoom: 14,
         });
@@ -44,9 +45,14 @@ const Map = (props) => {
         const behavior = new H.mapevents.Behavior(
           new H.mapevents.MapEvents(newMap)
         );
-  
+        // Create the polygon object using PolygonObjectAPI
+        PolygonObject(newMap);
+
         // Set the map object to the reference
         map.current = newMap;
+        
+        
+
       }
     },
     // Dependencies array
