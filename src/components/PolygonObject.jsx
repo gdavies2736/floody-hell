@@ -4,8 +4,15 @@ import polygonmapAPI from "../utils/polygonmapAPI";
 import Map from "./PolygonMap";
 
 function PolygonObject(map) {
+    console.log(polygonmapAPI.testPolygonObject.features[0].geometry.coordinates[0])
+    const coordinateArr = [];
+    polygonmapAPI.testPolygonObject.features[0].geometry.coordinates[0].map(elem => {
+        coordinateArr.push(elem[1]);
+        coordinateArr.push(elem[0]);
+        coordinateArr.push(100);
+    })
     const lineString = new H.geo.LineString(
-        [52,13,100,48,2,100,48,16,100,52,13,100],
+        coordinateArr,
         'values lat lng alt'
     );
 
