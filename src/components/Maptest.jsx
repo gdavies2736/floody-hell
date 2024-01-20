@@ -3,10 +3,6 @@ import H from '@here/maps-api-for-javascript'; // npm install @here/maps-api-for
 import polygonmapAPI from "../utils/polygonmapAPI";
 import PolygonObject from "./PolygonObject";
 
-const mapContainerId = {
-    id: "mapContainer",
-}
-
 function Maptest(props) {
     const mapRef = useRef(null);
     const map = useRef(null);
@@ -39,12 +35,16 @@ function Maptest(props) {
             const behavior = new H.mapevents.Behavior(
                 new H.mapevents.MapEvents(newMap)
             );
+            
+            // Create Polygon object and add it on the current map
+            PolygonObject(newMap);
+            
             map.current = newMap;
         }
     }, [apikey])
     
 
-    window.addEventListener("resize", () => map.getViewPort().resize());
+    // window.addEventListener("resize", () => map.getViewPort().resize());
     
 
     return (<>
