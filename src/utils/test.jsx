@@ -2,7 +2,7 @@ import React, {useEffect, useRef} from "react";
 import H from "@here/maps-api-for-javascript";
 import polygonmapAPI from "./polygonmapAPI";
 
-function totestMap(props){
+function TotestMap(props){
     const mapRef = useRef(null);
     const map = useRef(null);
     const platform = useRef(null);
@@ -33,4 +33,4 @@ function totestMap(props){
  </>)
 }
 
-export default totestMap;
+export default TotestMap;
