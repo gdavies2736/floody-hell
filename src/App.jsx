@@ -19,7 +19,7 @@ function App() {
       <Header />
       <Section />
       <Map />
-      <Maptest className="testmap"/>
+      <Maptest />
       <SearchPostcode />
       <FloodAlert />
       <div>
