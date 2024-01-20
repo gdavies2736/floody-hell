@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from "react";
 import H from '@here/maps-api-for-javascript'; // npm install @here/maps-api-for-javascript --registry=https://repo.platform.here.com/artifactory/api/npm/maps-api-for-javascript/
 import polygonmapAPI from "../utils/polygonmapAPI";
 import PolygonObject from "./PolygonObject";
-import TotestMap from "../utils/test";
 
 const mapContainerId = {
     id: "mapContainer",
@@ -13,6 +12,16 @@ function Maptest(props) {
     const map = useRef(null);
     const platform = useRef(null);
     const { apikey, testPolygonObject } = polygonmapAPI;
+
+    let latAverage = 0;
+    let lngAverage = 0;
+    let count = 0;
+
+    testPolygonObject.features[0].geometry.coordinates[0].map(elem => {
+        latAverage += elem[1];
+        lngAverage += elem[0];
+        count ++;
+    })
     
     useEffect(() => {
         if (!map.current){
@@ -22,8 +31,8 @@ function Maptest(props) {
             const newMap = new H.Map(mapRef.current, defaultLayers.vector.normal.map, {
                 zoom: 11,
                 center: {
-                    lat: 53.349805,
-                    lng: -6.260310
+                    lat: latAverage/count,
+                    lng: lngAverage/count,
                 },
             });
 

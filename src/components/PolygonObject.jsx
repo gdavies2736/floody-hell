@@ -1,7 +1,6 @@
 import React, { useEffect, useRef} from "react";
 import H from '@here/maps-api-for-javascript';
 import polygonmapAPI from "../utils/polygonmapAPI";
-import Map from "./PolygonMap";
 
 function PolygonObject(map) {
     // console.log(polygonmapAPI.testPolygonObject.features[0].geometry.coordinates[0])
