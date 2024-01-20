@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import H from '@here/maps-api-for-javascript'; // npm install @here/maps-api-for-javascript --registry=https://repo.platform.here.com/artifactory/api/npm/maps-api-for-javascript/
 import polygonmapAPI from "../utils/polygonmapAPI";
 import PolygonObject from "./PolygonObject";
+import "../styles/PolygonMap.css";
 
 function Maptest(props) {
     const mapRef = useRef(null);
@@ -25,7 +26,7 @@ function Maptest(props) {
             const defaultLayers = platform.current.createDefaultLayers(); // It is platform.current.createDefaultLayers(), not platform.createDefaultLayers()
 
             const newMap = new H.Map(mapRef.current, defaultLayers.vector.normal.map, {
-                zoom: 11,
+                zoom: 13,
                 center: {
                     lat: latAverage/count,
                     lng: lngAverage/count,
@@ -36,6 +37,9 @@ function Maptest(props) {
                 new H.mapevents.MapEvents(newMap)
             );
             
+            // Create the default UI:
+            const ui = H.ui.UI.createDefault(newMap, defaultLayers);
+
             // Create Polygon object and add it on the current map
             PolygonObject(newMap);
             
@@ -48,7 +52,9 @@ function Maptest(props) {
     
 
     return (<>
-    <div style={ { width: "100%", height: "500px" } } ref={mapRef}></div>
+    <div className="body"> 
+        <div className="bodyMap" ref={mapRef}></div>
+    </div>
     </>);
 }
 
