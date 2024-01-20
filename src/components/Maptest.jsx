@@ -46,14 +46,11 @@ function Maptest(props) {
             map.current = newMap;
         }
     }, [apikey])
+    // window.addEventListener("resize", () => map.getViewPort().resize()); change to the one in return
     
-
-    // window.addEventListener("resize", () => map.getViewPort().resize());
-    
-
     return (<>
     <div className="body"> 
-        <div className="bodyMap" ref={mapRef}></div>
+        <div className="bodyMap" ref={mapRef} onChange={() => newMap.getViewPort().resize()}></div>
     </div>
     </>);
 }
