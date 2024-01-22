@@ -42,6 +42,16 @@ function Maptest(props) {
             // Create Polygon object and add it on the current map
             PolygonObject(newMap);
             
+            // Create a map layer for the overview control
+            const overviewLayers = platform.current.createDefaultLayers();
+            const overviewMap = new H.ui.Overview(overviewLayers.raster.satellite.map, {
+                alignment: H.ui.LayoutAlignment.LEFT_BOTTOM,
+                zoomDelta: 6,
+                scaleX: 5,
+                scaleY: 6
+            });
+            ui.addControl("overview", overviewMap);
+
             map.current = newMap;
         }
     }, [apikey])
