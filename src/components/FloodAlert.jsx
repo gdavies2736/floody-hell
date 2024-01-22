@@ -11,9 +11,9 @@ const Result = await Response.json()
 console.log(Result);
 setFloodAlerts(Result.items.map(FloodAlert=>{
     return (<div>
-        <h1>{FloodAlert.severity}</h1>
-    <h2>{FloodAlert.severityLevel}</h2>
-    <h3>{FloodAlert.message}</h3>
+        <h1>{"Severity: " + FloodAlert.severity}</h1>
+    <h2>{"Severity Level: " + FloodAlert.severityLevel}</h2>
+    <h3>{"Flood Update: " + FloodAlert.message}</h3>
     </div>)
 
 }))
