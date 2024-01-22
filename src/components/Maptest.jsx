@@ -36,21 +36,21 @@ function Maptest(props) {
             const behavior = new H.mapevents.Behavior(
                 new H.mapevents.MapEvents(newMap)
             );
-            
             // Create the default UI:
-            const ui = H.ui.UI.createDefault(newMap, defaultLayers);
-
+            const ui = new H.ui.UI.createDefault(newMap, defaultLayers);
+            
             // Create Polygon object and add it on the current map
             PolygonObject(newMap);
             
             map.current = newMap;
         }
     }, [apikey])
-    // window.addEventListener("resize", () => map.getViewPort().resize()); change to the one in return
+    // window.addEventListener("resize", () => map.getViewPort().resize()); //change to the one in return
     
+
     return (<>
     <div className="body"> 
-        <div className="bodyMap" ref={mapRef} onChange={() => newMap.getViewPort().resize()}></div>
+        <div className="bodyMap" ref={mapRef}></div>
     </div>
     </>);
 }
