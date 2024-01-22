@@ -57,7 +57,6 @@ function Maptest(props) {
     }, [apikey])
     // window.addEventListener("resize", () => map.getViewPort().resize()); //change to the one in return
     
-
     return (<>
     <div className="body"> 
         <div className="bodyMap" ref={mapRef}></div>

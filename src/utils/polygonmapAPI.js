@@ -798,6 +798,81 @@ const testPolygonObject = {
         "crs": null
         }
     
-    
+const floodAlertObject =   {
+    "@context": "http://environment.data.gov.uk/flood-monitoring/meta/context.jsonld",
+    "meta": {
+        "publisher": "Environment Agency",
+        "licence": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+        "documentation": "http://environment.data.gov.uk/flood-monitoring/doc/reference",
+        "version": "0.9",
+        "comment": "Status: Beta service",
+        "hasFormat": [
+            "http://environment.data.gov.uk/flood-monitoring/id/floodAreas.csv?lat=53.2309339&long=-0.5176665&dist=1",
+            "http://environment.data.gov.uk/flood-monitoring/id/floodAreas.rdf?lat=53.2309339&long=-0.5176665&dist=1",
+            "http://environment.data.gov.uk/flood-monitoring/id/floodAreas.ttl?lat=53.2309339&long=-0.5176665&dist=1",
+            "http://environment.data.gov.uk/flood-monitoring/id/floodAreas.html?lat=53.2309339&long=-0.5176665&dist=1"
+        ],
+        "limit": 500
+        },
+    "items": [
+        {
+            "@id": "http://environment.data.gov.uk/flood-monitoring/id/floodAreas/053FWFPUWI06",
+            "county": "Lincolnshire",
+            "description": "Areas near the River Witham, Sincil Dyke, Great Gowts Drain, Fossdyke Canal, Boultham Drain and the Brayford Pool in Lincoln",
+            "eaAreaName": "Lincs and Northants",
+            "floodWatchArea": "http://environment.data.gov.uk/flood-monitoring/id/floodAreas/053WAF113LWA",
+            "fwdCode": "053FWFPUWI06",
+            "label": "Watercourses in the Lincoln area",
+            "lat": 53.22002,
+            "long": -0.55462,
+            "notation": "053FWFPUWI06",
+            "polygon": "http://environment.data.gov.uk/flood-monitoring/id/floodAreas/053FWFPUWI06/polygon",
+            "quickDialNumber": "307044",
+            "riverOrSea": "River Witham, Sincil Dyke, Great Gowts Drain"
+        },
+        {
+            "@id": "http://environment.data.gov.uk/flood-monitoring/id/floodAreas/053WAF113LWA",
+            "county": "Lincolnshire",
+            "description": "Witham, Sincil Dyke, Great Gowts Drain, Fossdyke Canal, Boultham Drain, Brayford Pool",
+            "eaAreaName": "Lincs and Northants",
+            "fwdCode": "053WAF113LWA",
+            "label": "Lincoln Watercourses",
+            "lat": 53.21764,
+            "long": -0.55269,
+            "notation": "053WAF113LWA",
+            "polygon": "http://environment.data.gov.uk/flood-monitoring/id/floodAreas/053WAF113LWA/polygon",
+            "quickDialNumber": "207010",
+            "riverOrSea": "River Witham, Sincil Dyke, Great Gowts Drain, Fos"
+        },
+        {
+            "@id": "http://environment.data.gov.uk/flood-monitoring/id/floodAreas/053WAF116TLW",
+            "county": "Lincolnshire",
+            "description": "Lower River Witham from Lincoln to Boston. Tributaries may also affect Woodhall Spa, Coningsby, South Kyme, and Bardney",
+            "eaAreaName": "Lincs and Northants",
+            "fwdCode": "053WAF116TLW",
+            "label": "Lower River Witham",
+            "lat": 53.09197,
+            "long": -0.19422,
+            "notation": "053WAF116TLW",
+            "polygon": "http://environment.data.gov.uk/flood-monitoring/id/floodAreas/053WAF116TLW/polygon",
+            "quickDialNumber": "207011",
+            "riverOrSea": "River Witham, South Delph"
+        },
+        {
+            "@id": "http://environment.data.gov.uk/flood-monitoring/id/floodAreas/053WAF117BED",
+            "county": "Lincolnshire",
+            "description": "Barlings Eau and Tributaries from Langworth to Short Ferry and Duckpool Catchwater from Gautby to Stixwould. Tributaries may also affect Welton, Dunholme, and Scothern",
+            "eaAreaName": "Lincs and Northants",
+            "fwdCode": "053WAF117BED",
+            "label": "Barlings Eau and Duckpool Catchwater",
+            "lat": 53.28343,
+            "long": -0.37427,
+            "notation": "053WAF117BED",
+            "polygon": "http://environment.data.gov.uk/flood-monitoring/id/floodAreas/053WAF117BED/polygon",
+            "quickDialNumber": "207012",
+            "riverOrSea": "Barlings Eau, Duckpool Catchwater"
+        }
+    ]
+}
 
-export default {apikey, testPolygonObject };
+export default {apikey, testPolygonObject, floodAlertObject };
