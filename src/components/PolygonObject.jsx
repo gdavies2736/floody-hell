@@ -18,9 +18,9 @@ function PolygonObject(map) {
     map.addObject(
         new H.map.Polygon(lineString, {
             style: {
-                fillColor: "#FFFFCC",
-                strokeColor: "#829",
-                lineWidth: 5
+                fillColor: "rgba(22, 71, 115, 0.5)",
+                strokeColor: "rgb(11, 43, 64)",
+                lineWidth: 3
             }
         })
     )

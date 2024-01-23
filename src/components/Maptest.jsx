@@ -4,7 +4,7 @@ import polygonmapAPI from "../utils/polygonmapAPI";
 import PolygonObject from "./PolygonObject";
 import "../styles/PolygonMap.css";
 
-function Maptest(props) {
+function Maptest() {
     const mapRef = useRef(null);
     const map = useRef(null);
     const platform = useRef(null);
