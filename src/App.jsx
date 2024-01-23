@@ -19,12 +19,12 @@ function App() {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar />
       <Header />
       <Section />
       <Map />
       <Maptest />
-      <SearchPostcode onSearchResult={handleSearchResult} />     
+      <SearchPostcode onSearchResult={handleSearchResult} />      */}
       <FloodAlert />
       <div>
         <a href="https://vitejs.dev" target="_blank">
