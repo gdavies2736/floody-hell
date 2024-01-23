@@ -13,13 +13,9 @@ function SearchPostcode() {
     try {
       const data = await fetchLocationData(searchQuery);
       const { latitude, longitude } = data;
-
-      // Call the fetchFloodAreas function with latitude and longitude
       const floodAreas = await fetchFloodAreas(latitude, longitude);
 
       const labels = floodAreas.items.map((item) => item.label);
-
-      // Log or process the flood areas data as needed
       console.log('Flood Areas:', floodAreas);
 
       setLocationData({
