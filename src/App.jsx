@@ -14,11 +14,11 @@ function App() {
 
   return (
     <>
-      {/* <Navbar />
+      /* <Navbar />
       <Header />
       <Section />
       <PolygonMap />
-      <SearchPostcode /> */}
+      <SearchPostcode /> */
       <FloodAlert />
       {/* <div>
         <a href="https://vitejs.dev" target="_blank">
