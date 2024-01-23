@@ -1,26 +1,28 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css';
 import Navbar from './components/Navbar';
 import Header from './components/Header';
 import Section from './components/Section';
-import PolygonMap from './components/PolygonMap';
+import Map from './components/PolygonMap';
 import SearchPostcode from './components/SearchPostcode';
 import FloodAlert from './components/FloodAlert';
+import Maptest from './components/Maptest';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      {/* <Navbar />
+      <Navbar />
       <Header />
       <Section />
-      <PolygonMap />
-      <SearchPostcode /> */}
+      <Map />
+      <Maptest />
+      <SearchPostcode />
       <FloodAlert />
-      {/* <div>
+      <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -33,13 +35,13 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button> */}
-        {/* <p>
+        <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
-      </p> */}
+      </p>
     </>
   )
 }
