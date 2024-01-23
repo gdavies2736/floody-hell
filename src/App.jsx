@@ -12,13 +12,17 @@ import FloodAlert from './components/FloodAlert';
 function App() {
   const [count, setCount] = useState(0)
 
+  const handleSearchResult = (result) => {
+    console.log('Search result:', result);
+  };
+
   return (
     <>
       <Navbar />
       <Header />
       <Section />
       <PolygonMap />
-      <SearchPostcode />
+      <SearchPostcode onSearchResult={handleSearchResult} />      
       <FloodAlert />
       <div>
         <a href="https://vitejs.dev" target="_blank">
