@@ -24,8 +24,6 @@ function App() {
       <Section />
       <SearchPostcode onSearchResult={handleSearchResult} />  
       <Map />
-      <Maptest />
-      <SearchPostcode onSearchResult={handleSearchResult} />
       <FloodAlert />
     </div>
     </>
