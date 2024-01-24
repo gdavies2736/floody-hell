@@ -18,7 +18,7 @@ const handleThemeSwitch = () => {
     return (
         <div>
             <div className=" static opacity-90 h-60 w-full mx-auto text-center bg-center bg-cover  bg-no-repeat bg-[url('..\src\images\casey-horner-flood.jpg')]">
-                <h1 className="pt-3 text-white text-7xl text-left indent-8">Floody-Hell</h1>
+                <h1 className="pt-3 text-white text-7xl text-left indent-8">Floody Hell</h1>
                 <p className=" indent-5 pt-2 text-white font-bold text-2xl text-left ">Find up to date flood information plotted onto a polygon map.</p>
                 <button onClick={handleThemeSwitch} className="absolute top-0 right-0 rounded bg-black text-white ">Dark Mode</button>
             </div>
