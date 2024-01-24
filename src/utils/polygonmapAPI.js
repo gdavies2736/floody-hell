@@ -797,82 +797,120 @@ const testPolygonObject = {
             ],
         "crs": null
         }
-    
+
+// https://environment.data.gov.uk/flood-monitoring/id/floods?lat=54.28219&long=-0.38364&dist=20
 const floodAlertObject =   {
-    "@context": "http://environment.data.gov.uk/flood-monitoring/meta/context.jsonld",
-    "meta": {
+        "@context": "http://environment.data.gov.uk/flood-monitoring/meta/context.jsonld",
+        "meta": {
         "publisher": "Environment Agency",
         "licence": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
         "documentation": "http://environment.data.gov.uk/flood-monitoring/doc/reference",
         "version": "0.9",
         "comment": "Status: Beta service",
         "hasFormat": [
-            "http://environment.data.gov.uk/flood-monitoring/id/floodAreas.csv?lat=53.2309339&long=-0.5176665&dist=1",
-            "http://environment.data.gov.uk/flood-monitoring/id/floodAreas.rdf?lat=53.2309339&long=-0.5176665&dist=1",
-            "http://environment.data.gov.uk/flood-monitoring/id/floodAreas.ttl?lat=53.2309339&long=-0.5176665&dist=1",
-            "http://environment.data.gov.uk/flood-monitoring/id/floodAreas.html?lat=53.2309339&long=-0.5176665&dist=1"
-        ],
-        "limit": 500
-        },
-    "items": [
+                        "http://environment.data.gov.uk/flood-monitoring/id/floods.csv?lat=54.28219&long=-0.38364&dist=20",
+                        "http://environment.data.gov.uk/flood-monitoring/id/floods.rdf?lat=54.28219&long=-0.38364&dist=20",
+                        "http://environment.data.gov.uk/flood-monitoring/id/floods.ttl?lat=54.28219&long=-0.38364&dist=20",
+                        "http://environment.data.gov.uk/flood-monitoring/id/floods.html?lat=54.28219&long=-0.38364&dist=20"
+                ]
+            },
+        "items": [
         {
-            "@id": "http://environment.data.gov.uk/flood-monitoring/id/floodAreas/053FWFPUWI06",
-            "county": "Lincolnshire",
-            "description": "Areas near the River Witham, Sincil Dyke, Great Gowts Drain, Fossdyke Canal, Boultham Drain and the Brayford Pool in Lincoln",
-            "eaAreaName": "Lincs and Northants",
-            "floodWatchArea": "http://environment.data.gov.uk/flood-monitoring/id/floodAreas/053WAF113LWA",
-            "fwdCode": "053FWFPUWI06",
-            "label": "Watercourses in the Lincoln area",
-            "lat": 53.22002,
-            "long": -0.55462,
-            "notation": "053FWFPUWI06",
-            "polygon": "http://environment.data.gov.uk/flood-monitoring/id/floodAreas/053FWFPUWI06/polygon",
-            "quickDialNumber": "307044",
-            "riverOrSea": "River Witham, Sincil Dyke, Great Gowts Drain"
+                "@id": "http://environment.data.gov.uk/flood-monitoring/id/floods/122WAF949",
+                "description": "Upper River Derwent",
+                "eaAreaName": "Yorkshire",
+                "eaRegionName": "No longer used",
+                "floodArea": {
+                "@id": "http://environment.data.gov.uk/flood-monitoring/id/floodAreas/122WAF949",
+                "county": "East Riding of Yorkshire, North Yorkshire",
+                "envelope": {
+                "lowerCorner": {
+                "lx": 461335,
+                "ly": 458350
         },
-        {
-            "@id": "http://environment.data.gov.uk/flood-monitoring/id/floodAreas/053WAF113LWA",
-            "county": "Lincolnshire",
-            "description": "Witham, Sincil Dyke, Great Gowts Drain, Fossdyke Canal, Boultham Drain, Brayford Pool",
-            "eaAreaName": "Lincs and Northants",
-            "fwdCode": "053WAF113LWA",
-            "label": "Lincoln Watercourses",
-            "lat": 53.21764,
-            "long": -0.55269,
-            "notation": "053WAF113LWA",
-            "polygon": "http://environment.data.gov.uk/flood-monitoring/id/floodAreas/053WAF113LWA/polygon",
-            "quickDialNumber": "207010",
-            "riverOrSea": "River Witham, Sincil Dyke, Great Gowts Drain, Fos"
-        },
-        {
-            "@id": "http://environment.data.gov.uk/flood-monitoring/id/floodAreas/053WAF116TLW",
-            "county": "Lincolnshire",
-            "description": "Lower River Witham from Lincoln to Boston. Tributaries may also affect Woodhall Spa, Coningsby, South Kyme, and Bardney",
-            "eaAreaName": "Lincs and Northants",
-            "fwdCode": "053WAF116TLW",
-            "label": "Lower River Witham",
-            "lat": 53.09197,
-            "long": -0.19422,
-            "notation": "053WAF116TLW",
-            "polygon": "http://environment.data.gov.uk/flood-monitoring/id/floodAreas/053WAF116TLW/polygon",
-            "quickDialNumber": "207011",
-            "riverOrSea": "River Witham, South Delph"
-        },
-        {
-            "@id": "http://environment.data.gov.uk/flood-monitoring/id/floodAreas/053WAF117BED",
-            "county": "Lincolnshire",
-            "description": "Barlings Eau and Tributaries from Langworth to Short Ferry and Duckpool Catchwater from Gautby to Stixwould. Tributaries may also affect Welton, Dunholme, and Scothern",
-            "eaAreaName": "Lincs and Northants",
-            "fwdCode": "053WAF117BED",
-            "label": "Barlings Eau and Duckpool Catchwater",
-            "lat": 53.28343,
-            "long": -0.37427,
-            "notation": "053WAF117BED",
-            "polygon": "http://environment.data.gov.uk/flood-monitoring/id/floodAreas/053WAF117BED/polygon",
-            "quickDialNumber": "207012",
-            "riverOrSea": "Barlings Eau, Duckpool Catchwater"
-        }
+    "upperCorner": {
+    "ux": 511054,
+    "uy": 500740
+    }
+    },
+    "notation": "122WAF949",
+    "polygon": "http://environment.data.gov.uk/flood-monitoring/id/floodAreas/122WAF949/polygon",
+    "riverOrSea": "River Derwent, Sea Cut, River Hertford, Burniston Beck"
+    },
+    "floodAreaID": "122WAF949",
+    "isTidal": false,
+    "message": "River levels remain high on the River Derwent due to heavy rainfall associated with Storms Isha and Jocelyn. Flooding is forecast to affect locations near the upper River Derwent, with low-lying land expected to be most affected, particularly around Low Marishes. Further rainfall is forecast over the coming days. We are closely monitoring the situation. Consider putting your flood plan into action. You should avoid walking, cycling or driving through flood water. This message will be updated by 9:00PM on Wednesday 24/01/2024, or as the situation changes.",
+    "severity": "Flood alert",
+    "severityLevel": 3,
+    "timeMessageChanged": "2024-01-24T09:22:00",
+    "timeRaised": "2024-01-24T09:22:57",
+    "timeSeverityChanged": "2024-01-22T15:56:00"
+    },
+    {
+    "@id": "http://environment.data.gov.uk/flood-monitoring/id/floods/122WAC954",
+    "description": "North Sea coast at Bridlington",
+    "eaAreaName": "Yorkshire",
+    "eaRegionName": "No longer used",
+    "floodArea": {
+    "@id": "http://environment.data.gov.uk/flood-monitoring/id/floodAreas/122WAC954",
+    "county": "East Riding of Yorkshire",
+    "envelope": {
+    "lowerCorner": {
+    "lx": 516700,
+    "ly": 455765.00000000186
+    },
+    "upperCorner": {
+    "ux": 525948.3440518444,
+    "uy": 474933.0000000037
+    }
+    },
+    "notation": "122WAC954",
+    "polygon": "http://environment.data.gov.uk/flood-monitoring/id/floodAreas/122WAC954/polygon",
+    "riverOrSea": "North Sea"
+    },
+    "floodAreaID": "122WAC954",
+    "isTidal": true,
+    "message": "This alert has been removed due to improving conditions. We continue to monitor the forecast and will reissue this alert if necessary. ",
+    "severity": "Warning no longer in force",
+    "severityLevel": 4,
+    "timeMessageChanged": "2024-01-23T19:52:00",
+    "timeRaised": "2024-01-23T19:52:17",
+    "timeSeverityChanged": "2024-01-23T19:52:00"
+    },
+    {
+    "@id": "http://environment.data.gov.uk/flood-monitoring/id/floods/122WAF970",
+    "description": "Gypsey Race and the Wolds",
+    "eaAreaName": "Yorkshire",
+    "eaRegionName": "No longer used",
+    "floodArea": {
+    "@id": "http://environment.data.gov.uk/flood-monitoring/id/floodAreas/122WAF970",
+    "county": "East Riding of Yorkshire, North Yorkshire",
+    "envelope": {
+    "lowerCorner": {
+    "lx": 487332.1653538728,
+    "ly": 465190.0001220722
+    },
+    "upperCorner": {
+    "ux": 518409.97131347656,
+    "uy": 476950.0001220703
+    }
+    },
+    "notation": "122WAF970",
+    "polygon": "http://environment.data.gov.uk/flood-monitoring/id/floodAreas/122WAF970/polygon",
+    "riverOrSea": "Gypsey Race"
+    },
+    "floodAreaID": "122WAF970",
+    "isTidal": false,
+    "message": "This alert remains in place as river levels remain high on the Gypsey Race due to recent rainfall and high groundwater levels. Flooding is forecast to affect locations near the Gypsey Race, with low lying land expected to be most affected, particularly around the Gypsey Race from Wold Newton to Bridlington. Groundwater will remain high for some time. We are closely monitoring the situation. Avoid using low lying footpaths and any bridges near local watercourses and do not attempt to walk or drive through flood water. This message will be updated by 5:00pm on Thursday 25/01/2024, or as the situation changes.",
+    "severity": "Flood alert",
+    "severityLevel": 3,
+    "timeMessageChanged": "2024-01-24T16:56:00",
+    "timeRaised": "2024-01-24T16:56:18",
+    "timeSeverityChanged": "2024-01-02T19:44:00"
+    }
     ]
 }
+
+
 
 export default {apikey, testPolygonObject, floodAlertObject };

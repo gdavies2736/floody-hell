@@ -23,7 +23,7 @@ function App() {
       <Header />
       <Section />
       <SearchPostcode onSearchResult={handleSearchResult} />  
-      <Map />
+      {/* <Map /> */}
       <Maptest />   
       <FloodAlert />
     </div>
