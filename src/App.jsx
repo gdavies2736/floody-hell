@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css';
@@ -19,14 +19,14 @@ function App() {
 
   return (
     <>
-    <div className="dark:bg-slate-900">
+    <div  className='dark:bg-slate-900 dark:text-white bg-neutral-300'>
       <Header />
       <Section />
+      <SearchPostcode onSearchResult={handleSearchResult} />  
       <Map />
-      <Maptest />
-      <SearchPostcode onSearchResult={handleSearchResult} />     
+      <Maptest />   
       <FloodAlert />
-      </div>
+    </div>
     </>
   )
 }
