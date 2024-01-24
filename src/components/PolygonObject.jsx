@@ -15,13 +15,17 @@ function PolygonObjectTest ({lat, long}) {
         Result.items.map((elem) => {
             let polygonURL = fetch(elem.floodArea.polygon);
             let data =  polygonURL.json();
+            let coordinate = [];
             console.log(data);
-                data.features[0].geometry.coordinates[0].map(elem1 => {
-
-                }
-
-                )
+            
+            data.features[0].geometry.coordinates[0].map(elem1 => {
+                coordinate.push(elem[1]);
+                coordinate.push(elem[0]);
+                coordinate.push(100);
             })
+            polygonArr.push(coordinate); // After finishing for each elem object, a new array is added into the polygonArr array.
+        })
+        
         return (<></>)
     }
     
