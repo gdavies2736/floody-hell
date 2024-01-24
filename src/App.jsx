@@ -19,7 +19,7 @@ function App() {
 
   return (
     <>
-    <div  className='bg-neutral-300'>
+    <div  className='dark:bg-slate-900 dark:text-white bg-neutral-300'>
       <Header />
       <Section />
       <SearchPostcode onSearchResult={handleSearchResult} />  
