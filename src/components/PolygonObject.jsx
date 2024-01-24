@@ -3,10 +3,10 @@ import H from '@here/maps-api-for-javascript';
 import polygonmapAPI from "../utils/polygonmapAPI";
 
 function PolygonObjectTest ({lat, long}) {
-    const polygonArr = [];
+    const polygonArr = []; // To hold all polygon arrays
+    const lineStringArr = []; // To hold all linestring object from the polygon Arr
     
     const FetchFloodAlerts = async () => {
-    
         const BaseURL = `https://environment.data.gov.uk/flood-monitoring/id/floods?lat=${54.28219}&long=${-0.38364}&dist=10`;
         const Response = await fetch(BaseURL);
         const Result = await Response.json();
@@ -30,20 +30,9 @@ function PolygonObjectTest ({lat, long}) {
         const lineString = new H.geo.LineString(
             elem, "values lat lng alt"
         )
+        lineStringArr.push(lineString);
     });
-
-    useEffect(() => {
-        
-    
-    FetchFloodAlerts()
-    },[])
-    
-        return (
-            <>
-           {FloodAlerts}
-            </>
-        )
-    }
+}
 
 function PolygonObject(map) {
     // console.log(polygonmapAPI.testPolygonObject.features[0].geometry.coordinates[0])
