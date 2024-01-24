@@ -4,7 +4,9 @@ import "../styles/Section.css"
 const Section = () => {
     return (
         <>
-        Test for section 
+        <div className="pt-6">
+
+        </div>
         <form>
             
         </form>
