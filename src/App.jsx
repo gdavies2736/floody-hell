@@ -19,7 +19,6 @@ function App() {
 
   return (
     <>
-      <Navbar />
       <Header />
       <Section />
       <Map />
