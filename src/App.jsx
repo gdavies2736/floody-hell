@@ -9,6 +9,7 @@ import Map from './components/PolygonMap';
 import SearchPostcode from './components/SearchPostcode';
 import FloodAlert from './components/FloodAlert';
 import Maptest from './components/Maptest';
+import PolygonObjectTest from './components/ObjectTest';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -24,6 +25,7 @@ function App() {
       <Section />
       <SearchPostcode onSearchResult={handleSearchResult} />  
       {/* <Map /> */}
+      <PolygonObjectTest />
       <Maptest />   
       <FloodAlert />
     </div>

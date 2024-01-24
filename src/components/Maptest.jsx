@@ -2,17 +2,18 @@ import React, { useEffect, useRef } from "react";
 import H from '@here/maps-api-for-javascript'; // npm install @here/maps-api-for-javascript --registry=https://repo.platform.here.com/artifactory/api/npm/maps-api-for-javascript/
 import polygonmapAPI from "../utils/polygonmapAPI";
 import PolygonObject from "./PolygonObject";
+// import PolygonObjectTest from "./PolygonObject";
 import "../styles/PolygonMap.css";
 
 function Maptest() {
     const mapArray = []; // To hold all the possible maps that can be created
     const { apikey, testPolygonObject } = polygonmapAPI;
-    
+    const mapRef = useRef(null);
+    const map = useRef(null);
+    const platform = useRef(null);
+
+    // console.log(PolygonObjectTest);
     useEffect(() => {
-        const mapRef = useRef(null);
-        const map = useRef(null);
-        const platform = useRef(null);
-    
         let latAverage = 0;
         let lngAverage = 0;
         let count = 0;
@@ -24,15 +25,15 @@ function Maptest() {
         })
         
         platform.current = new H.service.Platform({ apikey });
-            const defaultLayers = platform.current.createDefaultLayers(); // It is platform.current.createDefaultLayers(), not platform.createDefaultLayers()
+        const defaultLayers = platform.current.createDefaultLayers(); // It is platform.current.createDefaultLayers(), not platform.createDefaultLayers()
 
-            const newMap = new H.Map(mapRef.current, defaultLayers.vector.normal.map, {
-                zoom: 13,
-                center: {
-                    lat: latAverage/count,
-                    lng: lngAverage/count,
+        const newMap = new H.Map(mapRef.current, defaultLayers.vector.normal.map, {
+            zoom: 13,
+            center: {
+                lat: latAverage/count,
+                lng: lngAverage/count,
                 },
-            });
+        });
 
             const behavior = new H.mapevents.Behavior(
                 new H.mapevents.MapEvents(newMap)
