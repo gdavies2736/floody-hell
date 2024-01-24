@@ -5,8 +5,7 @@ import polygonmapAPI from "../utils/polygonmapAPI";
 function PolygonObjectTest ({lat, long}) {
     const polygonArr = [];
     
-    useEffect(() => {
-        const FetchFloodAlerts = async () => {
+    const FetchFloodAlerts = async () => {
     
         const BaseURL = `https://environment.data.gov.uk/flood-monitoring/id/floods?lat=${54.28219}&long=${-0.38364}&dist=10`;
         const Response = await fetch(BaseURL);
@@ -25,9 +24,16 @@ function PolygonObjectTest ({lat, long}) {
             })
             polygonArr.push(coordinate); // After finishing for each elem object, a new array is added into the polygonArr array.
         })
-        
-        return (<></>)
     }
+
+    polygonArr.map((elem) => {
+        const lineString = new H.geo.LineString(
+            elem, "values lat lng alt"
+        )
+    });
+
+    useEffect(() => {
+        
     
     FetchFloodAlerts()
     },[])
