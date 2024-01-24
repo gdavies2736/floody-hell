@@ -19,12 +19,14 @@ function App() {
 
   return (
     <>
+    <div className="dark:bg-slate-900">
       <Header />
       <Section />
       <Map />
       <Maptest />
       <SearchPostcode onSearchResult={handleSearchResult} />     
       <FloodAlert />
+      </div>
     </>
   )
 }
