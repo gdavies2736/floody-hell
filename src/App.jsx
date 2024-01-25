@@ -9,6 +9,7 @@ import SearchPostcode from './components/SearchPostcode';
 import FloodAlert from './components/FloodAlert';
 import Map from './components/Map';
 import PolygonObject from './components/PolygonObject';
+import Footer from './components/Footer';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,8 +23,11 @@ function App() {
     <div  className='dark:bg-slate-900 dark:text-white bg-neutral-300'>
       <Header />
       <Section />
-      <SearchPostcode onSearchResult={handleSearchResult} />  
+      <SearchPostcode onSearchResult={handleSearchResult} />
+      <div className='mapAndAlerts'> 
       <Map />
+      </div>
+      <Footer />
     </div>
     </>
   )
