@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from "react";
 import H from '@here/maps-api-for-javascript'; // npm install @here/maps-api-for-javascript --registry=https://repo.platform.here.com/artifactory/api/npm/maps-api-for-javascript/
 import polygonmapAPI from "../utils/polygonmapAPI";
 import PolygonObject from "./PolygonObject";
-// import PolygonObjectTest from "./PolygonObject";
 import "../styles/PolygonMap.css";
 
 function Maptest() {

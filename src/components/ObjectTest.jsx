@@ -27,25 +27,6 @@ function PolygonObjectTest () {
         })
     }
     baseURLFetch();
-    // fetch(BaseURL)
-    // .then((response) => {return response.json()})
-    // .then((result) => {
-    //     result.items.map((elem) => {
-    //         // console.log("Elem: ", elem);
-    //         fetch(elem.floodArea.polygon)
-    //         .then((polygon) => {return polygon.json()})
-    //         .then((data) => {
-    //             let coordinate = [];
-    //             data.features[0].geometry.coordinates[0][0].map(elem1 => {
-    //                 // console.log("Elem1: ", elem1);
-    //                 coordinate.push(elem1[1]);
-    //                 coordinate.push(elem1[0]);
-    //                 coordinate.push(100);
-    //             })
-    //             polygonArr.push(coordinate); // After finishing for each elem object, a new array is added into the polygonArr array.
-    //         })
-    //     })
-    // })
 
     console.log("PolygonArr: ", polygonArr);
     polygonArr.map((elem) => {
