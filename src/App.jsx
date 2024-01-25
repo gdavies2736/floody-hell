@@ -8,8 +8,8 @@ import Section from './components/Section';
 import Map from './components/PolygonMap';
 import SearchPostcode from './components/SearchPostcode';
 import FloodAlert from './components/FloodAlert';
-import Maptest from './components/Maptest';
-import PolygonObjectTest from './components/ObjectTest';
+import Maptest from './components/MaptestOfficial';
+import PolygonObjectTest from './components/ObjectTestOfficial';
 
 function App() {
   const [count, setCount] = useState(0)

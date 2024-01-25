@@ -2,7 +2,7 @@ import React, { useEffect, useRef} from "react";
 import H from '@here/maps-api-for-javascript';
 import polygonmapAPI from "../utils/polygonmapAPI";
 
-function PolygonObjectTest (lat, lng, map) {
+function PolygonObject (lat, lng, map) {
     // const polygonArr = []; // To hold all polygon arrays
     const coordinate = [];
     // const lineStringArr = []; // To hold all linestring object from the polygon Arr
@@ -66,4 +66,4 @@ function PolygonObjectTest (lat, lng, map) {
     ;
 }
 
-export default PolygonObjectTest;
+export default PolygonObject;

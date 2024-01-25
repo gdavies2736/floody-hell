@@ -1,10 +1,10 @@
 import React, { useEffect, useRef } from "react";
 import H from '@here/maps-api-for-javascript'; // npm install @here/maps-api-for-javascript --registry=https://repo.platform.here.com/artifactory/api/npm/maps-api-for-javascript/
 import polygonmapAPI from "../utils/polygonmapAPI";
-import PolygonObject from "./PolygonObject";
+import PolygonObject from "./PolygonObjectTesting";
 import "../styles/PolygonMap.css";
 
-function Maptest() {
+function Map() {
     const mapArray = []; // To hold all the possible maps that can be created
     const { apikey, testPolygonObject } = polygonmapAPI;
     const mapRef = useRef(null);
@@ -67,5 +67,5 @@ function Maptest() {
     </>);
 }
 
-export default Maptest;
+export default Map;
 // https://simplefrontend.com/get-element-by-id-in-react/?utm_content=cmp-true

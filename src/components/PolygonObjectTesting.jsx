@@ -2,7 +2,7 @@ import React, { useEffect, useRef} from "react";
 import H from '@here/maps-api-for-javascript';
 import polygonmapAPI from "../utils/polygonmapAPI";
 
-function PolygonObject(map) {
+function PolygonObjectTesting(map) {
     // console.log(polygonmapAPI.testPolygonObject.features[0].geometry.coordinates[0])
     const coordinateArr = [];
     polygonmapAPI.testPolygonObject.features[0].geometry.coordinates[0].map(elem => {
@@ -26,4 +26,4 @@ function PolygonObject(map) {
     )
 }
 
-export default PolygonObject;
+export default PolygonObjectTesting;
