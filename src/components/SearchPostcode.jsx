@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { fetchLocationData } from '../utils/postcodeAPI';
 import { fetchFloodAreas } from '../utils/floodwarningAPI';
+import PolygonObject from './PolygonObject';
 
 function SearchPostcode() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -109,6 +110,7 @@ function SearchPostcode() {
           Search
         </button>
       </form>
+      <PolygonObject latitude={locationData.latitude} longitude={locationData.longitude} />
       {locationData && (
         <div>
           <h2>Location Data:</h2>
