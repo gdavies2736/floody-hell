@@ -23,9 +23,8 @@ function Map() {
 
     // console.log(PolygonObjectTest);
     useEffect(() => {
-        
-        
-        platform.current = new H.service.Platform({ apikey });
+        if (!map.current){
+            platform.current = new H.service.Platform({ apikey });
         const defaultLayers = platform.current.createDefaultLayers(); // It is platform.current.createDefaultLayers(), not platform.createDefaultLayers()
 
         const newMap = new H.Map(mapRef.current, defaultLayers.vector.normal.map, {
@@ -56,9 +55,7 @@ function Map() {
             ui.addControl("overview", overviewMap);
 
             map.current = newMap;
-            
-        // if (!map.current){
-        // }
+        }
     }, [apikey])
     // window.addEventListener("resize", () => map.getViewPort().resize()); //change to the one in return
     
