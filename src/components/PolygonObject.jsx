@@ -3,14 +3,11 @@ import H from '@here/maps-api-for-javascript';
 import polygonmapAPI from "../utils/polygonmapAPI";
 
 function PolygonObject (map) {
-    // const polygonArr = []; // To hold all polygon arrays
     const coordinate = [];
-
-    
     // const lineStringArr = []; // To hold all linestring object from the polygon Arr
     // const BaseURL = `https://environment.data.gov.uk/flood-monitoring/id/floods?lat=54.28219&long=-0.38364&dist=30`;
     const baseURLFetch = async () => {
-        const BaseURL = `https://environment.data.gov.uk/flood-monitoring/id/floods?lat=${latitude}&long=${longitude}&dist=30`;
+        const BaseURL = `https://environment.data.gov.uk/flood-monitoring/id/floods?lat=54.28219&long=-0.38364&dist=30`;
         const response = await fetch(BaseURL);
         const result = await response.json();
 
@@ -62,14 +59,6 @@ function PolygonObject (map) {
             }
         })
     );
-    // console.log("PolygonArr: ", polygonArr);
-    // polygonArr.map((elem) => {
-    //     const lineString = new H.geo.LineString(
-    //         elem, "values lat lng alt"
-    //     )
-    //     lineStringArr.push(lineString);
-    // });
-    
 }
 
 export default PolygonObject;

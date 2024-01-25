@@ -110,7 +110,7 @@ function SearchPostcode() {
           Search
         </button>
       </form>
-      <PolygonObject latitude={locationData.latitude} longitude={locationData.longitude} />
+      {/* <PolygonObject latitude={locationData.latitude} longitude={locationData.longitude} /> */}
       {locationData && (
         <div>
           <h2>Location Data:</h2>
