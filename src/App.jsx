@@ -24,14 +24,12 @@ function App() {
       <Header />
       <Section />
       <SearchPostcode onSearchResult={handleSearchResult} />  
-<<<<<<< HEAD
+
       {/* <Map /> */}
       <PolygonObjectTest />
       <Maptest />   
-=======
-      <Map />
->>>>>>> 0cedd11359bd340414dca3195194be3565a9b27e
-      <FloodAlert />
+
+
     </div>
     </>
   )
