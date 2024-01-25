@@ -31,7 +31,7 @@ function SearchPostcode() {
 
   return (
     <div>
-      <form className="flex items-center" onSubmit={submitHandler}>
+      <form className="flex items-center py-3 pb-4 px-5" onSubmit={submitHandler}>
         <label htmlFor="voice-search" className="sr-only">
           Search
         </label>
