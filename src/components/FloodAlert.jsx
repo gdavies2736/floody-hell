@@ -1,36 +1,46 @@
 import React, { useEffect, useState } from "react";
-import "../styles/FloodAlert.css"
+import "../styles/FloodAlert.css";
 
-function FloodAlert ({lat, long}) {
-const [FloodAlerts, setFloodAlerts] = useState([])
-useEffect(()=>{
-const FetchFloodAlerts =async()=>{
-console.log("Hello world");
-const BaseURL = `https://environment.data.gov.uk/flood-monitoring/id/floods?lat=${51.874767}&long=${-1.740083}&dist=10`
-const Response = await fetch(BaseURL)
-const Result = await Response.json()
-console.log(Result);
-setFloodAlerts(Result.items.map(FloodAlert=>{
-    return (<div class="infocontainer">
-        <span class="alertheader">Severity: <span id="updates">{FloodAlert.severity}</span></span>
-    <span class="alertheader">Severity Level: <span id="updates">{FloodAlert.severityLevel}</span></span>
-    <span class="alertheader">Flood Update: <span id="updates">{FloodAlert.message}</span></span>
-    </div>)
+function FloodAlert({ latitude, longitude }) {
+  const [FloodAlerts, setFloodAlerts] = useState([]);
+  useEffect(() => {
+    const FetchFloodAlerts = async () => {
+      const BaseURL = `https://environment.data.gov.uk/flood-monitoring/id/floods?lat=${latitude}&long=${longitude}&dist=25`;
+      console.log(BaseURL);
+      const Response = await fetch(BaseURL);
+      const Result = await Response.json();
+      console.log(Result);
+      setFloodAlerts(
+        Result.items.map((FloodAlert) => {
+          return (
+            <div key={FloodAlert.id} className="infocontainer">
+              <span className="alertheader">
+                Severity: <span id="updates">{FloodAlert.severity}</span>
+              </span>
+              <span className="alertheader">
+                Severity Level:{" "}
+                <span id="updates">{FloodAlert.severityLevel}</span>
+              </span>
+              <span className="alertheader">
+                Flood Update: <span id="updates">{FloodAlert.message}</span>
+              </span>
+            </div>
+          );
+        })
+      );
+    };
+    FetchFloodAlerts();
+  }, [latitude, longitude]);
 
-}))
-}
-FetchFloodAlerts()
-},[])
-
-    return (
-        <div class="floodalertcontainer">
-        <div>
-            <h1>Flood Alerts</h1>
-        </div>
-        <img></img>
-       {FloodAlerts}
-        </div>
-    )
+  return (
+    <div className="floodalertcontainer">
+      <div>
+        <h1>Flood Alerts</h1>
+      </div>
+      <img alt="Flood" />
+      {FloodAlerts}
+    </div>
+  );
 }
 
 export default FloodAlert;
