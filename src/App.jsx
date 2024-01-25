@@ -24,10 +24,11 @@ function App() {
       <Header />
       <Section />
       <SearchPostcode onSearchResult={handleSearchResult} />
-      <div className='mapAndAlerts'> 
-      <Map />
-      <Footer />
     </div>
+      <div className='mapAndAlerts'> 
+        <Map />
+        <Footer />
+      </div>
     </>
   )
 }
