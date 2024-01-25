@@ -50,15 +50,15 @@ function PolygonObject (map) {
         coordinate, 'values lat lng alt'
     )
 
-    map.addObject(
-        new H.map.Polygon(lineString, {
-            style: {
-                fillColor: "rgba(22, 71, 115, 0.5)",
-                strokeColor: "rgb(11, 43, 64)",
-                lineWidth: 3
-            }
-        })
-    );
+    // map.addObject(
+    //     new H.map.Polygon(lineString, {
+    //         style: {
+    //             fillColor: "rgba(22, 71, 115, 0.5)",
+    //             strokeColor: "rgb(11, 43, 64)",
+    //             lineWidth: 3
+    //         }
+    //     })
+    // );
 }
 
 export default PolygonObject;
