@@ -1,7 +1,7 @@
 import axios from "axios";
 import {} from "../components/SearchPostcode";
 
-const fetchFloodAreas = async (latitude, longitude, distance = 5) => {
+const fetchFloodAreas = async (latitude, longitude, distance = 500) => {
   const apiUrl = `https://environment.data.gov.uk/flood-monitoring/id/floods?lat=${latitude}&long=${longitude}&dist=${distance}`;
 
   try {

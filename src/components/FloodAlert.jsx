@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import "../styles/FloodAlert.css"
 // import floodimage from '../images/floodimage1.jpeg';
 import floodwarning2 from '../images/floodwarning2.png';
@@ -8,12 +7,12 @@ import severefloodwarning from '../images/severefloodwarning.png';
 import nolongerinforce from '../images/nolongerinforce.png';
 
 
-function FloodAlert ({lat, long}) {
+function FloodAlert ({ latitude, longitude }) {
 const [FloodAlerts, setFloodAlerts] = useState([])
 useEffect(()=>{
 const FetchFloodAlerts =async()=>{
 console.log("Hello world");
-const BaseURL = `https://environment.data.gov.uk/flood-monitoring/id/floods?lat=${51.874767}&long=${-1.740083}&dist=10`
+const BaseURL = `https://environment.data.gov.uk/flood-monitoring/id/floods?lat=${latitude}&long=${longitude}&dist=25`
 const Response = await fetch(BaseURL)
 const Result = await Response.json()
 function RenderImage (state) {
@@ -43,7 +42,7 @@ setFloodAlerts(Result.items.map(FloodAlert=>{
 }))
 }
 FetchFloodAlerts()
-},[])
+},[latitude, longitude])
 
     return (
         <div class="floodalertcontainer">
