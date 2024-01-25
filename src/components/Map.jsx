@@ -2,7 +2,8 @@ import React, { useEffect, useRef } from "react";
 import H from '@here/maps-api-for-javascript'; // npm install @here/maps-api-for-javascript --registry=https://repo.platform.here.com/artifactory/api/npm/maps-api-for-javascript/
 import polygonmapAPI from "../utils/polygonmapAPI";
 import PolygonObject from "./PolygonObject";
-// import "../styles/PolygonMap.css";
+// import PolygonObjectTest from "./PolygonObject";
+import "../styles/PolygonMap.css";
 
 function Map() {
     // const mapArray = []; // To hold all the possible maps that can be created
@@ -26,7 +27,7 @@ function Map() {
         if (!map.current){
             platform.current = new H.service.Platform({ apikey });
         const defaultLayers = platform.current.createDefaultLayers(); // It is platform.current.createDefaultLayers(), not platform.createDefaultLayers()
-
+        
         const newMap = new H.Map(mapRef.current, defaultLayers.vector.normal.map, {
             zoom: 13,
             center: {
@@ -60,8 +61,8 @@ function Map() {
     // window.addEventListener("resize", () => map.getViewPort().resize()); //change to the one in return
     
     return (<>
-    <div className="flex items-center py-3 pb-4 px-5"> 
-        <div className="flex items-center py-3 pb-4 px-5" ref={mapRef}></div>
+    <div className="body1"> 
+        <div className="bodyMap" ref={mapRef}></div>
     </div>
     </>);
 }

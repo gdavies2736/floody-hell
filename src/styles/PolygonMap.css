@@ -1,15 +1,15 @@
-/* .body {
+.body1 {
     width: 50%;
     height: 50%;
     position: absolute;
-    margin: 0px;
+    /* margin: 0px;
     padding: 0px;
-    overflow: hidden;
+    overflow: hidden; */
 }
 .bodyMap {
     position:absolute;
-    top:0;
-    bottom:0;
+    /* top:0;
+    bottom:0; */
     width: 90%;
     height: 90%;
-} */
+}
