@@ -21,6 +21,7 @@ scrollbar-width:auto
     gap: 16px;
     padding-inline: 24px 32px;
     justify-items: baseline;
+    padding: 1%;
 }
 
 .alertheader {
