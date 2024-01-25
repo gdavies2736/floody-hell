@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { fetchLocationData } from '../utils/postcodeAPI';
-import { fetchFloodAreas } from '../utils/floodwarningAPI';
-import FloodAlert from './FloodAlert';
+import React, { useState } from "react";
+import { fetchLocationData } from "../utils/postcodeAPI";
+import { fetchFloodAreas } from "../utils/floodwarningAPI";
+import FloodAlert from "./FloodAlert";
 
 function SearchPostcode() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -15,8 +15,8 @@ function SearchPostcode() {
       const data = await fetchLocationData(searchQuery);
       const { latitude, longitude } = data;
       const floodAreas = await fetchFloodAreas(latitude, longitude);
-      setLocationData({ latitude, longitude })
-      console.log(longitude, latitude)
+      setLocationData({ latitude, longitude });
+      console.log(longitude, latitude);
       console.log(floodAreas);
       setError(null);
     } catch (error) {
@@ -31,7 +31,10 @@ function SearchPostcode() {
 
   return (
     <div>
-      <form className="flex items-center py-3 pb-4 px-5" onSubmit={submitHandler}>
+      <form
+        className="flex items-center py-3 pb-4 px-5"
+        onSubmit={submitHandler}
+      >
         <label htmlFor="voice-search" className="sr-only">
           Search
         </label>
@@ -102,10 +105,12 @@ function SearchPostcode() {
               d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
             />
           </svg>
-          Search
         </button>
       </form>
-      <FloodAlert latitude={locationData?.latitude} longitude={locationData?.longitude} />
+      <FloodAlert
+        latitude={locationData?.latitude}
+        longitude={locationData?.longitude}
+      />
       {error && (
         <div style={{ color: "red" }}>
           <p>Error: {error}</p>
