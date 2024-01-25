@@ -5,11 +5,10 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Header from './components/Header';
 import Section from './components/Section';
-import Map from './components/PolygonMap';
 import SearchPostcode from './components/SearchPostcode';
 import FloodAlert from './components/FloodAlert';
-import Maptest from './components/MaptestOfficial';
-import PolygonObjectTest from './components/ObjectTestOfficial';
+import Map from './components/Map';
+import PolygonObject from './components/PolygonObject';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -24,12 +23,7 @@ function App() {
       <Header />
       <Section />
       <SearchPostcode onSearchResult={handleSearchResult} />  
-
-      {/* <Map /> */}
-      <PolygonObjectTest />
-      <Maptest />   
-
-
+      <Map />
     </div>
     </>
   )
