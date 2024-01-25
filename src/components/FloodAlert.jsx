@@ -23,8 +23,8 @@ FetchFloodAlerts()
 },[])
 
     return (
-        <div class="floodalertcontainer">
-        <div>
+        <div class="floodalertcontainer" >
+        <div >
             <h1>Flood Alerts</h1>
         </div>
         <img></img>
