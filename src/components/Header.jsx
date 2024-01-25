@@ -19,7 +19,7 @@ function Header () {
             >
                 <h1 className="pt-4 text-white text-8xl text-left indent-8">Floody-Hell</h1>
                 <p className="pt-4 indent-5 text-white font-bold text-2xl text-left ">Find up to date flood information plotted onto a polygon map.</p>
-                <button onClick={changeToDarkMode} className="absolute self-end rounded bg-black text-white ">{darkMode ? 'light mode':'dark mode'}</button>
+                <button onClick={changeToDarkMode} className="absolute top-0 right-0 rounded bg-black text-white ">{darkMode ? 'Light Mode':'Dark Mode'}</button>
             </div>
         </div>
     )
