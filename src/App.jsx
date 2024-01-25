@@ -20,13 +20,17 @@ function App() {
 
   return (
     <>
-    <div  className='bg-neutral-300'>
+    <div  className='dark:bg-slate-900 dark:text-white bg-neutral-300'>
       <Header />
       <Section />
       <SearchPostcode onSearchResult={handleSearchResult} />  
+<<<<<<< HEAD
       {/* <Map /> */}
       <PolygonObjectTest />
       <Maptest />   
+=======
+      <Map />
+>>>>>>> 0cedd11359bd340414dca3195194be3565a9b27e
       <FloodAlert />
     </div>
     </>
