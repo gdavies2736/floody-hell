@@ -1,16 +1,22 @@
 import React, { useEffect, useRef} from "react";
 import H from '@here/maps-api-for-javascript';
 import polygonmapAPI from "../utils/polygonmapAPI";
+import { fetchFloodAreas } from "../utils/floodwarningAPI";
 
-function PolygonObject (lat, lng, map) {
+function PolygonObject (map) {
     // const polygonArr = []; // To hold all polygon arrays
     const coordinate = [];
+
+    
     // const lineStringArr = []; // To hold all linestring object from the polygon Arr
     // const BaseURL = `https://environment.data.gov.uk/flood-monitoring/id/floods?lat=54.28219&long=-0.38364&dist=30`;
     const baseURLFetch = async () => {
         const BaseURL = `https://environment.data.gov.uk/flood-monitoring/id/floods?lat=54.28219&long=-0.38364&dist=30`;
         const response = await fetch(BaseURL);
         const result = await response.json();
+
+        // const floodAreas = await fetchFloodAreas(latitude, longitude);
+        // console.log("Flood areas: ", floodAreas);
         // result.items.map((elem) => {
         //     fetch(elem.floodArea.polygon)
         //     .then((polygon) => {return polygon.json()})
