@@ -72,7 +72,9 @@ const Map = () => {
 // Return a div element to hold the map
 return (
       <>
-      <div style={ {  width: "90%", height: "500px" } } ref={mapRef} />
+      <div className="flex ml-60">
+      <div style={ {  width: "100%", height: "500px" } } ref={mapRef} />
+      </div>
       </>);
 }
 

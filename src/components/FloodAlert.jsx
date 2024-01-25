@@ -34,7 +34,7 @@ function RenderImage (state) {
 console.log(Result);
 setFloodAlerts(Result.items.map(FloodAlert=>{
     return (<div class="infocontainer">
-         <img class="floodwarning2" src={RenderImage(FloodAlert)} alt="Flood warning levels"/>  
+         <img className=" mx-auto floodwarning2" src={RenderImage(FloodAlert)} alt="Flood warning levels"/>  
         <span class="alertheader">Severity: <span id="updates">{FloodAlert.severity}</span></span>
     <span class="alertheader">Severity Level: <span id="updates">{FloodAlert.severityLevel}</span></span>
     <span class="alertheader">Flood Update: <span id="updates">{FloodAlert.message}</span></span>
@@ -46,15 +46,15 @@ FetchFloodAlerts()
 },[])
 
     return (
-        <div class="floodalertcontainer">
+        <div className=" floodalertcontainer">
         <div>
             <h1 class="mainFloodAlert">Flood Alerts</h1>
         </div>
         <div class="warningLevelContainer">
         <h2 class="warningLevels">Flood Warning Level Guide</h2>
-        <img class="floodwarning2" src={floodwarning2} alt="Flood warning levels"/> 
+        <img className="mx-auto floodwarning2" src={floodwarning2} alt="Flood warning levels"/> 
         </div>
-        <h2 class="liveUpdates">Live Updates </h2>
+        <h2 className="liveUpdates">Live Updates </h2>
 
        {FloodAlerts}
         </div>

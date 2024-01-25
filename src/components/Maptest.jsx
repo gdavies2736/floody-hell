@@ -58,8 +58,8 @@ function Maptest() {
     // window.addEventListener("resize", () => map.getViewPort().resize()); //change to the one in return
     
     return (<>
-    <div className="flex items-center py-3 pb-4 px-5"> 
-        <div className="flex items-center py-3 pb-4 px-5" ref={mapRef}></div>
+    <div className=""> 
+        <div className="" ref={mapRef}></div>
     </div>
     </>);
 }
