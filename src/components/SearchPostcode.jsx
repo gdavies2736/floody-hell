@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { fetchLocationData } from '../utils/postcodeAPI';
-import { fetchFloodAreas } from '../utils/floodwarningAPI';
-import PolygonObject from './PolygonObject';
-=======
 import React, { useState } from "react";
 import { fetchLocationData } from "../utils/postcodeAPI";
 import { fetchFloodAreas } from "../utils/floodwarningAPI";
 import FloodAlert from "./FloodAlert";
->>>>>>> 8b39c8041f90e433a9663f02743dd4b2e64c0fc7
 
 function SearchPostcode() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -114,8 +107,6 @@ function SearchPostcode() {
           </svg>
         </button>
       </form>
-<<<<<<< HEAD
-      {/* <PolygonObject latitude={locationData.latitude} longitude={locationData.longitude} /> */}
       {locationData && (
         <div>
           <h2>Location Data:</h2>
@@ -125,12 +116,6 @@ function SearchPostcode() {
         </div>
       )}
 
-=======
-      <FloodAlert
-        latitude={locationData?.latitude}
-        longitude={locationData?.longitude}
-      />
->>>>>>> 8b39c8041f90e433a9663f02743dd4b2e64c0fc7
       {error && (
         <div style={{ color: "red" }}>
           <p>Error: {error}</p>

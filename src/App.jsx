@@ -24,13 +24,6 @@ function App() {
       <Header />
       <Section />
       <SearchPostcode onSearchResult={handleSearchResult} />
-<<<<<<< HEAD
-      <div className='mapAndAlerts'> 
-      <Map />
-      </div>
-      <Footer />
-=======
->>>>>>> 8b39c8041f90e433a9663f02743dd4b2e64c0fc7
     </div>
       <div className='mapAndAlerts'> 
         <Map />
