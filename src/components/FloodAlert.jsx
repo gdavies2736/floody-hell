@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../styles/FloodAlert.css"
+import floodimage from '../images/floodimage1.jpeg';
+import floodwarning2 from '../images/floodwarning2.png';
 
 function FloodAlert ({lat, long}) {
 const [FloodAlerts, setFloodAlerts] = useState([])
@@ -25,9 +27,15 @@ FetchFloodAlerts()
     return (
         <div class="floodalertcontainer">
         <div>
-            <h1>Flood Alerts</h1>
+            <h1 class="mainFloodAlert">Flood Alerts</h1>
         </div>
-        <img></img>
+        <img class="floodimage" src={floodimage} alt="Flood Image"/> 
+        <div class="warningLevelContainer">
+        <h2 class="warningLevels">Flood Warning Levels</h2>
+        <img class="floodwarning2" src={floodwarning2} alt="Flood warning levels"/> 
+        </div>
+        <h2 class="liveUpdates">Live Updates </h2>
+
        {FloodAlerts}
         </div>
     )
