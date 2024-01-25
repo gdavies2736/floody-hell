@@ -12,7 +12,9 @@ function FloodAlert({ latitude, longitude }) {
   useEffect(() => {
     const FetchFloodAlerts = async () => {
       console.log("Hello world");
-      const BaseURL = `https://environment.data.gov.uk/flood-monitoring/id/floods?lat=${latitude}&long=${longitude}&dist=250`;
+
+      const BaseURL = `https://environment.data.gov.uk/flood-monitoring/id/floods?lat=${latitude}&long=${longitude}&dist=25`;
+
       const Response = await fetch(BaseURL);
       const Result = await Response.json();
       function RenderImage(state) {
