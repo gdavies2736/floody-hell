@@ -1,8 +1,8 @@
 .floodalertcontainer {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     width: 697px;
-    height: 1225px;
+    height: 1225px; */
     border-radius: 10px;
     margin-top: 48px;
 border: 6px solid #EE0D0D;
@@ -27,7 +27,7 @@ scrollbar-width:auto
 color: #000;
 text-align: left;
 font-family: Poppins;
-font-size: 28px;
+font-size: 24px;
 font-style: normal;
 font-weight: 600;
 line-height: normal;
@@ -37,17 +37,19 @@ padding-top: 24px;
 #updates {
     color: #000;
     font-family: Poppins;
-    font-size: 24px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
-    line-height: 36px; /* 200% */ 
+    line-height: 36px; /* 200% */
+    margin-bottom: ; 
     
     
 }
 
 .mainFloodAlert {
-    margin-top: 24px;
-    margin-bottom: 8px;
+    margin-top: 16px;
+    margin-bottom: 0px;
+    font-weight: 600;
 }
 
 .floodimage {
@@ -58,6 +60,26 @@ padding-top: 24px;
 .floodwarning2 {
     margin-left: 174px;
     margin-right: 72px;
+    margin-top: 24px;
+}
+
+.mainFloodAlert {
+color: #EE0D0D;
+}
+
+
+.warningLevels {
+    margin-top: 24px;
+    margin-bottom: 16px;
+    padding: 8px;
+    background-color: lightskyblue
+}
+
+.liveUpdates {
+    font-size: 28px;
+    margin-top: 24px;
+    padding: 8px;
+    background-color: lightskyblue ;
 }
 
     
