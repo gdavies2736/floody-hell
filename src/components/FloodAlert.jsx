@@ -1,5 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "../styles/FloodAlert.css"
+// import floodimage from '../images/floodimage1.jpeg';
+import floodwarning2 from '../images/floodwarning2.png';
+import floodAlert from '../images/floodAlert.png';
+import floodwarningtriangle from '../images/floodwarningtriangle.png';
+import severefloodwarning from '../images/severefloodwarning.png';
+import nolongerinforce from '../images/nolongerinforce.png';
+
 
 function FloodAlert ({lat, long}) {
 const [FloodAlerts, setFloodAlerts] = useState([])
@@ -9,9 +16,25 @@ console.log("Hello world");
 const BaseURL = `https://environment.data.gov.uk/flood-monitoring/id/floods?lat=${51.874767}&long=${-1.740083}&dist=10`
 const Response = await fetch(BaseURL)
 const Result = await Response.json()
+function RenderImage (state) {
+    if (state.severity.toLowerCase() === "flood alert") {
+        return floodAlert  
+    }
+    if (state.severity.toLowerCase() === "flood warning") {
+        return floodwarningtriangle
+    }
+    if (state.severity.toLowerCase() === "severe flood warning") {
+        return severefloodwarning
+    }
+    if (state.severity.toLowerCase() === "warning no longer in force") {
+        return nolongerinforce
+    }
+}
+
 console.log(Result);
 setFloodAlerts(Result.items.map(FloodAlert=>{
     return (<div class="infocontainer">
+         <img class="floodwarning2" src={RenderImage(FloodAlert)} alt="Flood warning levels"/>  
         <span class="alertheader">Severity: <span id="updates">{FloodAlert.severity}</span></span>
     <span class="alertheader">Severity Level: <span id="updates">{FloodAlert.severityLevel}</span></span>
     <span class="alertheader">Flood Update: <span id="updates">{FloodAlert.message}</span></span>
@@ -23,11 +46,16 @@ FetchFloodAlerts()
 },[])
 
     return (
-        <div class="floodalertcontainer" >
-        <div >
-            <h1>Flood Alerts</h1>
+        <div class="floodalertcontainer">
+        <div>
+            <h1 class="mainFloodAlert">Flood Alerts</h1>
         </div>
-        <img></img>
+        <div class="warningLevelContainer">
+        <h2 class="warningLevels">Flood Warning Level Guide</h2>
+        <img class="floodwarning2" src={floodwarning2} alt="Flood warning levels"/> 
+        </div>
+        <h2 class="liveUpdates">Live Updates </h2>
+
        {FloodAlerts}
         </div>
     )
