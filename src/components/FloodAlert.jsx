@@ -12,7 +12,7 @@ function FloodAlert({ latitude, longitude }) {
   useEffect(() => {
     const FetchFloodAlerts = async () => {
       console.log("Hello world");
-      const BaseURL = `https://environment.data.gov.uk/flood-monitoring/id/floods?lat=${latitude}&long=${longitude}&dist=250`;
+      const BaseURL = `https://environment.data.gov.uk/flood-monitoring/id/floods?lat=${latitude}&long=${longitude}&dist=0`;
       const Response = await fetch(BaseURL);
       const Result = await Response.json();
       function RenderImage(state) {
@@ -36,7 +36,7 @@ function FloodAlert({ latitude, longitude }) {
           return (
             <div className="infocontainer" key={FloodAlert.id}>
               <img
-                className="floodwarning2"
+                className="mx-auto floodwarning2"
                 src={RenderImage(FloodAlert)}
                 alt="Flood warning levels"
               />
@@ -66,7 +66,7 @@ function FloodAlert({ latitude, longitude }) {
       <div className="warningLevelContainer">
         <h2 className="warningLevels">Flood Warning Level Guide</h2>
         <img
-          className="floodwarning2"
+          className="mx-auto floodwarning2"
           src={floodwarning2}
           alt="Flood warning levels"
         />
