@@ -1,14 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css';
-import Navbar from './components/Navbar';
 import Header from './components/Header';
 import Section from './components/Section';
-import Map from './components/PolygonMap';
 import SearchPostcode from './components/SearchPostcode';
-import FloodAlert from './components/FloodAlert';
-import Maptest from './components/Maptest';
+
 import Footer from './components/Footer';
 
 function App() {
@@ -25,8 +20,9 @@ function App() {
       <Section />
       <SearchPostcode onSearchResult={handleSearchResult} />
     </div>
+    
       <div className='mapAndAlerts'> 
-        <Map />
+        
         <Footer />
       </div>
     </>
